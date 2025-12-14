@@ -147,3 +147,55 @@ nav a:hover {
   box-shadow: var(--shadow);
   margin-bottom: 25px;
 }
+/* ---------------------------
+   LOGIN PAGE THEME
+--------------------------- */
+
+.login-container {
+  height: 100vh;
+  background: url('/images/building-door.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 14px;
+  max-width: 380px;
+  width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(5px);
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--brand);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background var(--fade);
+}
+
+.login-button:hover {
+  background: var(--brand-light);
+}
+
+.login-error {
+  color: red;
+  margin-top: 10px;
+}
