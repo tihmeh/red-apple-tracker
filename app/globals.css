@@ -1,5 +1,83 @@
+/* ---- Global Theme ---- */
+
+:root {
+  --bg: #f9f9f9;
+  --card-bg: #ffffff;
+  --border: #e0e0e0;
+  --text: #222;
+  --subtext: #555;
+  --brand: #0047ab; /* deep corporate blue */
+  --brand-dark: #00347d;
+}
+
 body {
   margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0;
+}
+
+/* Navigation Bar */
+
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
   padding: 20px;
-  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 24px;
+  font-size: 18px;
+}
+
+nav a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--brand-dark);
+}
+
+/* Page Container */
+
+main {
+  padding: 40px;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 40px;
+}
+
+/* Cards */
+
+.property-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand);
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
 }
