@@ -199,3 +199,6 @@ nav a:hover {
   color: red;
   margin-top: 10px;
 }
+body.no-nav nav {
+  display: none !important;
+}
