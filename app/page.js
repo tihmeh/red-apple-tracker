@@ -1,27 +1,27 @@
 export default function Home() {
   return (
     <div>
-      <h1>Red Apple Real Estate Portfolio</h1>
-      <p style={{ fontSize: "18px", color: "#666", maxWidth: "700px" }}>
-        Explore detailed information about major Red Apple Group real estate developments.
-      </p>
+      <div className="hero">
+        <h1>Red Apple Group Real Estate Portfolio</h1>
+        <p>A curated, investor-grade presentation of New York and Florida development assets.</p>
+      </div>
 
-      <h2>Browse Portfolio</h2>
+      <h2>Explore Portfolio</h2>
 
       <div className="grid">
         <a href="/properties" className="property-card">
           <h3>All Properties</h3>
-          <p>Full portfolio overview</p>
+          <p>Complete holdings & active developments</p>
         </a>
 
         <a href="/properties/new-york" className="property-card">
           <h3>New York</h3>
-          <p>Brooklyn, Manhattan, & Coney Island assets</p>
+          <p>Brooklyn, Manhattan & Coney Island</p>
         </a>
 
         <a href="/properties/florida" className="property-card">
           <h3>Florida</h3>
-          <p>St. Petersburg developments</p>
+          <p>Downtown St. Petersburg skyline projects</p>
         </a>
       </div>
     </div>
