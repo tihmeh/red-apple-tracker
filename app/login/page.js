@@ -1,16 +1,21 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  // Hide nav bar by forcing layout to skip rendering nav
+  useEffect(() => {
+    document.body.classList.add("no-nav");
+    return () => document.body.classList.remove("no-nav");
+  }, []);
+
   function handleLogin(e) {
     e.preventDefault();
 
     if (password === "apple") {
-      // Set cookie readable by Next.js middleware
       document.cookie = "authorized=yes; Path=/; SameSite=Lax; Secure";
       window.location.href = "/";
     } else {
@@ -21,8 +26,8 @@ export default function LoginPage() {
   return (
     <div className="login-wrapper">
       <div className="login-box">
-        <h1 className="login-title">🔒 Secure Portfolio Access</h1>
-        <p className="login-sub">Enter password to access the Red Apple portfolio.</p>
+        <h1 className="login-title">🔒 Secure Portfolio</h1>
+        <p className="login-sub">Enter password to continue</p>
 
         <form onSubmit={handleLogin}>
           <input
@@ -33,7 +38,6 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
             className="login-input"
           />
-
           <button className="login-button">Unlock</button>
         </form>
 
@@ -42,4 +46,3 @@ export default function LoginPage() {
     </div>
   );
 }
-
