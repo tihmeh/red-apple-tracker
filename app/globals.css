@@ -1,19 +1,20 @@
 /* ---------------------------
-   GLOBAL THEME & VARIABLES
+   GLOBAL THEME
 --------------------------- */
 
 :root {
-  --brand: #0047ab;          /* Corporate blue */
-  --brand-dark: #00347d;     
-  --bg: #f5f7fa;             /* Light gray background */
+  --brand: #003b8e;
+  --brand-light: #0059d6;
+  --bg: #f4f6f9;
+  --surface: #ffffff;
   --text: #1a1a1a;
-  --muted: #6b6b6b;
-  --card-bg: #ffffff;
-  --border: #e1e1e1;
-  --radius: 12px;
-  --shadow: 0 4px 10px rgba(0,0,0,0.06);
-  --max-width: 1200px;
-  --font: Inter, Arial, sans-serif;
+  --subtext: #5a5a5a;
+  --border: #e3e3e3;
+  --radius: 14px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.06);
+  --fade: 0.25s ease;
+  --max-width: 1300px;
+  --font: Inter, system-ui, sans-serif;
 }
 
 /* ---------------------------
@@ -29,9 +30,9 @@ body {
 }
 
 main {
-  padding: 40px;
   max-width: var(--max-width);
   margin: auto;
+  padding: 40px;
 }
 
 /* ---------------------------
@@ -39,55 +40,65 @@ main {
 --------------------------- */
 
 nav {
-  background: white;
-  border-bottom: 1px solid var(--border);
+  background: var(--surface);
   padding: 20px 40px;
+  border-bottom: 1px solid var(--border);
   display: flex;
-  gap: 28px;
+  gap: 32px;
   font-size: 18px;
+  align-items: center;
+  font-weight: 600;
   box-shadow: var(--shadow);
 }
 
 nav a {
   text-decoration: none;
   color: var(--brand);
-  font-weight: 600;
+  transition: color var(--fade);
 }
 
 nav a:hover {
-  color: var(--brand-dark);
+  color: var(--brand-light);
 }
 
 /* ---------------------------
-   TYPOGRAPHY
+   HERO SECTION
 --------------------------- */
 
-h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 10px;
+.hero {
+  background: linear-gradient(
+      rgba(0, 59, 142, 0.75),
+      rgba(0, 59, 142, 0.75)
+    ),
+    url('/images/400-central.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px;
+  color: white;
+  border-radius: var(--radius);
+  margin-bottom: 40px;
+  box-shadow: var(--shadow);
 }
 
-h2 {
-  font-size: 28px;
-  margin-top: 40px;
-  margin-bottom: 10px;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
 }
 
-p {
-  line-height: 1.6;
-  color: var(--muted);
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  color: #e8e8e8;
 }
 
 /* ---------------------------
-   GRID SYSTEM
+   GRID
 --------------------------- */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
 }
 
 /* ---------------------------
@@ -95,58 +106,44 @@ p {
 --------------------------- */
 
 .property-card {
-  background: var(--card-bg);
+  background: var(--surface);
+  border-radius: var(--radius);
   padding: 20px;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
   box-shadow: var(--shadow);
   text-decoration: none;
   color: var(--text);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  transition: transform var(--fade), box-shadow var(--fade);
 }
 
 .property-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  border-color: var(--brand);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.09);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
 }
 
 .property-card h3 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.property-card p {
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted);
+  margin: 0 0 6px;
 }
 
 /* ---------------------------
-   HERO BANNER OPTION
+   DETAIL IMAGE
 --------------------------- */
 
-.hero {
-  background: linear-gradient(
-      rgba(0, 55, 125, 0.75),
-      rgba(0, 55, 125, 0.75)
-    ),
-    url('/images/400-central.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 80px;
-  border-radius: var(--radius);
-  color: white;
-  margin-bottom: 40px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #e8e8e8;
-  font-size: 20px;
+.detail-img {
+  width: 100%;
   max-width: 700px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
 }
