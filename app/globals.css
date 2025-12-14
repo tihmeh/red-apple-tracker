@@ -1,83 +1,152 @@
-/* ---- Global Theme ---- */
+/* ---------------------------
+   GLOBAL THEME & VARIABLES
+--------------------------- */
 
 :root {
-  --bg: #f9f9f9;
+  --brand: #0047ab;          /* Corporate blue */
+  --brand-dark: #00347d;     
+  --bg: #f5f7fa;             /* Light gray background */
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
   --card-bg: #ffffff;
-  --border: #e0e0e0;
-  --text: #222;
-  --subtext: #555;
-  --brand: #0047ab; /* deep corporate blue */
-  --brand-dark: #00347d;
+  --border: #e1e1e1;
+  --radius: 12px;
+  --shadow: 0 4px 10px rgba(0,0,0,0.06);
+  --max-width: 1200px;
+  --font: Inter, Arial, sans-serif;
 }
+
+/* ---------------------------
+   BASE
+--------------------------- */
 
 body {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
+  padding: 0;
   background: var(--bg);
   color: var(--text);
-  padding: 0;
+  font-family: var(--font);
 }
 
-/* Navigation Bar */
+main {
+  padding: 40px;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+/* ---------------------------
+   NAVBAR
+--------------------------- */
 
 nav {
-  background: #ffffff;
+  background: white;
   border-bottom: 1px solid var(--border);
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
-  gap: 24px;
+  gap: 28px;
   font-size: 18px;
+  box-shadow: var(--shadow);
 }
 
 nav a {
-  color: var(--brand);
   text-decoration: none;
-  font-weight: 500;
+  color: var(--brand);
+  font-weight: 600;
 }
 
 nav a:hover {
   color: var(--brand-dark);
 }
 
-/* Page Container */
-
-main {
-  padding: 40px;
-}
-
-/* Typography */
+/* ---------------------------
+   TYPOGRAPHY
+--------------------------- */
 
 h1 {
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 h2 {
   font-size: 28px;
   margin-top: 40px;
+  margin-bottom: 10px;
 }
 
-/* Cards */
-
-.property-card {
-  background: var(--card-bg);
-  padding: 20px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  text-decoration: none;
-  color: var(--text);
-  transition: all 0.2s ease;
+p {
+  line-height: 1.6;
+  color: var(--muted);
 }
 
-.property-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--brand);
-}
-
-/* Grid */
+/* ---------------------------
+   GRID SYSTEM
+--------------------------- */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
+  margin-top: 20px;
+}
+
+/* ---------------------------
+   PROPERTY CARD
+--------------------------- */
+
+.property-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  border-color: var(--brand);
+}
+
+.property-card h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.property-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---------------------------
+   HERO BANNER OPTION
+--------------------------- */
+
+.hero {
+  background: linear-gradient(
+      rgba(0, 55, 125, 0.75),
+      rgba(0, 55, 125, 0.75)
+    ),
+    url('/images/400-central.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px;
+  border-radius: var(--radius);
+  color: white;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #e8e8e8;
+  font-size: 20px;
+  max-width: 700px;
 }
