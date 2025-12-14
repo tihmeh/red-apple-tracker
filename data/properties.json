@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "the-andrea",
+    "name": "The Andrea",
+    "address": "218 Myrtle Avenue, Brooklyn, NY 11201",
+    "state": "new-york",
+    "units": 95,
+    "year": 2010,
+    "llc": "218 Myrtle LLC",
+    "image": "/images/the-andrea.jpg",
+    "type": "Residential"
+  },
+  {
+    "slug": "the-margo",
+    "name": "The Margo",
+    "address": "180 Myrtle Avenue, Brooklyn, NY 11201",
+    "state": "new-york",
+    "units": 228,
+    "year": 2015,
+    "llc": "180 Myrtle Ave LLC",
+    "image": "/images/the-margo.jpg",
+    "type": "Residential"
+  },
+  {
+    "slug": "the-giovanni",
+    "name": "The Giovanni",
+    "address": "81 Fleet Place, Brooklyn, NY 11201",
+    "state": "new-york",
+    "units": 205,
+    "year": 2015,
+    "llc": "81 Fleet Place LLC",
+    "image": "/images/the-giovanni.jpg",
+    "type": "Residential"
+  },
+  {
+    "slug": "the-eagle",
+    "name": "The Eagle (86 Fleet Place)",
+    "address": "86 Fleet Place, Brooklyn, NY 11201",
+    "state": "new-york",
+    "units": 440,
+    "year": 2018,
+    "llc": "86 Fleet Place LLC",
+    "image": "/images/the-eagle.jpg",
+    "type": "Residential Tower"
+  },
+  {
+    "slug": "ocean-dreams",
+    "name": "Ocean Dreams",
+    "address": "3514 Surf Avenue, Brooklyn, NY 11224",
+    "state": "new-york",
+    "units": 425,
+    "year": 2020,
+    "llc": "3514 Surf Avenue LLC",
+    "image": "/images/ocean-dreams.jpg",
+    "type": "Luxury Residential"
+  },
+  {
+    "slug": "670-pacific",
+    "name": "670 Pacific Street",
+    "address": "670 Pacific Street, Brooklyn, NY 11217",
+    "state": "new-york",
+    "units": 86,
+    "year": 2020,
+    "llc": "670 Pacific LLC",
+    "image": "/images/670-pacific.jpg",
+    "type": "Residential"
+  },
+  {
+    "slug": "280-eighth-avenue",
+    "name": "280 Eighth Avenue",
+    "address": "280 8th Avenue, New York, NY 10001",
+    "state": "new-york",
+    "units": 200,
+    "year": 2023,
+    "llc": "280 8th Ave Development LLC",
+    "image": "/images/280-8th.jpg",
+    "type": "Mixed-Use"
+  },
+  {
+    "slug": "400-central",
+    "name": "400 Central Tower",
+    "address": "400 Central Avenue, St. Petersburg, FL 33701",
+    "state": "florida",
+    "units": 301,
+    "year": 2025,
+    "llc": "Red Apple Real Estate Development St. Pete LLC",
+    "image": "/images/400-central.jpg",
+    "type": "Mixed-Use Tower"
+  },
+  {
+    "slug": "florida-arcade",
+    "name": "Florida Arcade Building",
+    "address": "449 Central Avenue, St. Petersburg, FL 33701",
+    "state": "florida",
+    "units": null,
+    "year": 1920,
+    "llc": "Florida Arcade LLC",
+    "image": "/images/florida-arcade.jpg",
+    "type": "Commercial"
+  },
+  {
+    "slug": "mirror-lake",
+    "name": "Mirror Lake Development Site",
+    "address": "5th Street N & 3rd Avenue N, St. Petersburg, FL",
+    "state": "florida",
+    "units": null,
+    "year": 2024,
+    "llc": "Mirror Lake Development LLC",
+    "image": "/images/mirror-lake.jpg",
+    "type": "Future Development"
+  }
+]
