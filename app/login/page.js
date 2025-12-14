@@ -10,7 +10,8 @@ export default function LoginPage() {
     e.preventDefault();
 
     if (password === "apple") {
-      document.cookie = "authorized=yes; path=/; max-age=86400"; // 24 hours
+      // Set cookie readable by Next.js middleware
+      document.cookie = "authorized=yes; Path=/; SameSite=Lax; Secure";
       window.location.href = "/";
     } else {
       setError("Incorrect password");
@@ -18,10 +19,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h1>🔒 Secure Access</h1>
-        <p>Enter password to access portfolio</p>
+    <div className="login-wrapper">
+      <div className="login-box">
+        <h1 className="login-title">🔒 Secure Portfolio Access</h1>
+        <p className="login-sub">Enter password to access the Red Apple portfolio.</p>
 
         <form onSubmit={handleLogin}>
           <input
@@ -41,3 +42,4 @@ export default function LoginPage() {
     </div>
   );
 }
+
